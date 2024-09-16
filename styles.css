@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+ 
+}
+
+.container {
+    position: absolute;
+  top: 0;
+  left: -60px;
+    width: 30%;
+    height: 750px;
+    border-radius:0 0 250px 250px ;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    z-index: -999;
+    padding: 20px 0;
+}
+
+.phone {
+    max-width: 300px;
+    border: 10px solid white;
+    border-radius: 36px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   margin: 50px 0 50px 160px;
+}
+
+.phone-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10px 10px 10px;
+    align-items: center;
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    position: relative;
+}
+.phone-header::after{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 180px;
+    background-color: white;
+    top: -25px;
+    left: 20%;
+    border-radius: 20px;
+}
+.phone-header .profile {
+    margin-left: -90px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.phone-header .profile .txt p {
+    color: white;
+    font-weight: 500;
+}
+
+.phone-header .profile .txt span {
+    margin-top: -10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.phone-header i {
+    color: white;
+}
+
+.phone-header .profile img {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.screen {
+    background-color: hsl(270, 20%, 96%);
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bubble.received {
+    background-color: hsla(289, 100%, 72%, 0.13);
+    color: hsl(276, 55%, 52%);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px 10px 10px 4px;
+    max-width: 70%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.bubble.sent {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.728);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px 10px 4px 10px;
+    max-width: 70%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.screen img {
+    width: 60px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.image-container {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    width: 60px;
+    border-radius: 10px;
+    display: block;
+}
+
+.type {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.type input {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 24px;
+    background-color: white;
+    margin-right: 10px;
+    font-size: 14px;
+    color: hsla(270, 20%, 96%, 0.34);
+}
+
+.type i {
+    padding: 5px 8px;
+    border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.section {
+    max-width: 40%;
+}
+
+.section h1 {
+    font-size: 40px;
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.details {
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 10px 10px 10px 4px;
+}
+
+.details p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.details .inp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.details label {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.details input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.details input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width : 376px) {
+    body{
+        flex-direction: column;
+       
+    }
+    .container{
+        height: 600px;
+        width: 250px;
+    }
+    .phone{
+        margin: 50px 0 0 0;
+    }
+    .section{
+       text-align: center;
+       margin: -20px 20px  50px 20px;
+       max-width: 100%;
+       
+
+    }
+    .section p{
+      margin: 15px 30px;
+        max-width: 90%;
+    }
+}
